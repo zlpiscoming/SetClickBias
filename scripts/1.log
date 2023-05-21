@@ -1,0 +1,138 @@
+2023-05-14 19:10:44.739181: I tensorflow/core/platform/cpu_feature_guard.cc:193] This TensorFlow binary is optimized with oneAPI Deep Neural Network Library (oneDNN) to use the following CPU instructions in performance-critical operations:  AVX2 AVX512F AVX512_VNNI FMA
+To enable them in other operations, rebuild TensorFlow with the appropriate compiler flags.
+2023-05-14 19:10:44.903970: I tensorflow/core/util/port.cc:104] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
+2023-05-14 19:10:44.909118: W tensorflow/compiler/xla/stream_executor/platform/default/dso_loader.cc:64] Could not load dynamic library 'libcudart.so.11.0'; dlerror: libcudart.so.11.0: cannot open shared object file: No such file or directory; LD_LIBRARY_PATH: /home/leping_zhang/.mujoco/mujoco210/bin:/usr/lib/nvidia
+2023-05-14 19:10:44.909160: I tensorflow/compiler/xla/stream_executor/cuda/cudart_stub.cc:29] Ignore above cudart dlerror if you do not have a GPU set up on your machine.
+2023-05-14 19:10:45.855624: W tensorflow/compiler/xla/stream_executor/platform/default/dso_loader.cc:64] Could not load dynamic library 'libnvinfer.so.7'; dlerror: libnvinfer.so.7: cannot open shared object file: No such file or directory; LD_LIBRARY_PATH: /home/leping_zhang/.mujoco/mujoco210/bin:/usr/lib/nvidia
+2023-05-14 19:10:45.855716: W tensorflow/compiler/xla/stream_executor/platform/default/dso_loader.cc:64] Could not load dynamic library 'libnvinfer_plugin.so.7'; dlerror: libnvinfer_plugin.so.7: cannot open shared object file: No such file or directory; LD_LIBRARY_PATH: /home/leping_zhang/.mujoco/mujoco210/bin:/usr/lib/nvidia
+2023-05-14 19:10:45.855726: W tensorflow/compiler/tf2tensorrt/utils/py_utils.cc:38] TF-TRT Warning: Cannot dlopen some TensorRT libraries. If you would like to use Nvidia GPU with TensorRT, please make sure the missing libraries mentioned above are installed properly.
+2023-05-14 19:10:49.904126: I tensorflow/core/platform/cpu_feature_guard.cc:193] This TensorFlow binary is optimized with oneAPI Deep Neural Network Library (oneDNN) to use the following CPU instructions in performance-critical operations:  AVX2 AVX512F AVX512_VNNI FMA
+To enable them in other operations, rebuild TensorFlow with the appropriate compiler flags.
+2023-05-14 19:10:50.153126: F tensorflow/tsl/platform/statusor.cc:33] Attempting to fetch value instead of handling error INTERNAL: failed initializing StreamExecutor for CUDA device ordinal 0: INTERNAL: failed call to cuDevicePrimaryCtxRetain: CUDA_ERROR_OUT_OF_MEMORY: out of memory; total memory reported: 25447170048
+[ruc-PowerEdge-T640:04531] *** Process received signal ***
+[ruc-PowerEdge-T640:04531] Signal: Aborted (6)
+[ruc-PowerEdge-T640:04531] Signal code:  (-6)
+[ruc-PowerEdge-T640:04531] [ 0] /lib/x86_64-linux-gnu/libpthread.so.0(+0x12980)[0x7fe0bb499980]
+[ruc-PowerEdge-T640:04531] [ 1] /lib/x86_64-linux-gnu/libc.so.6(gsignal+0xc7)[0x7fe0bb0d4e87]
+[ruc-PowerEdge-T640:04531] [ 2] /lib/x86_64-linux-gnu/libc.so.6(abort+0x141)[0x7fe0bb0d67f1]
+[ruc-PowerEdge-T640:04531] [ 3] /home/leping_zhang/anaconda3/envs/tf/lib/python3.8/site-packages/tensorflow/python/../libtensorflow_framework.so.2(+0x8552a7)[0x7fe08953c2a7]
+[ruc-PowerEdge-T640:04531] [ 4] /home/leping_zhang/anaconda3/envs/tf/lib/python3.8/site-packages/tensorflow/python/../libtensorflow_framework.so.2(_ZN3tsl17internal_statusor6Helper5CrashERKNS_6StatusE+0x5e)[0x7fe089422b62]
+[ruc-PowerEdge-T640:04531] [ 5] /home/leping_zhang/anaconda3/envs/tf/lib/python3.8/site-packages/tensorflow/python/../libtensorflow_framework.so.2(_ZN10tensorflow20BaseGPUDeviceFactory16EnablePeerAccessERKSt6vectorIN3tsl3gtl7IntTypeINS2_21PlatformDeviceId_tag_EiEESaIS6_EE+0x32a)[0x7fe08a36d07a]
+[ruc-PowerEdge-T640:04531] [ 6] /home/leping_zhang/anaconda3/envs/tf/lib/python3.8/site-packages/tensorflow/python/../libtensorflow_framework.so.2(_ZN10tensorflow20BaseGPUDeviceFactory13CreateDevicesERKNS_14SessionOptionsERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEEPSt6vectorISt10unique_ptrINS_6DeviceESt14default_deleteISE_EESaISH_EE+0x1872)[0x7fe08a374522]
+[ruc-PowerEdge-T640:04531] [ 7] /home/leping_zhang/anaconda3/envs/tf/lib/python3.8/site-packages/tensorflow/python/../libtensorflow_framework.so.2(_ZN10tensorflow13DeviceFactory10AddDevicesERKNS_14SessionOptionsERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEEPSt6vectorISt10unique_ptrINS_6DeviceESt14default_deleteISE_EESaISH_EE+0x3bf)[0x7fe089f42acf]
+[ruc-PowerEdge-T640:04531] [ 8] /home/leping_zhang/anaconda3/envs/tf/lib/python3.8/site-packages/tensorflow/python/_pywrap_tensorflow_internal.so(_ZN10tensorflow20DirectSessionFactory10NewSessionERKNS_14SessionOptionsEPPNS_7SessionE+0x336)[0x7fdfe76782d6]
+[ruc-PowerEdge-T640:04531] [ 9] /home/leping_zhang/anaconda3/envs/tf/lib/python3.8/site-packages/tensorflow/python/../libtensorflow_framework.so.2(_ZN10tensorflow10NewSessionERKNS_14SessionOptionsEPPNS_7SessionE+0xe6)[0x7fe08a33d396]
+[ruc-PowerEdge-T640:04531] [10] /home/leping_zhang/anaconda3/envs/tf/lib/python3.8/site-packages/tensorflow/python/_pywrap_tensorflow_internal.so(TF_NewSession+0x3f)[0x7fdfe747407f]
+[ruc-PowerEdge-T640:04531] [11] /home/leping_zhang/anaconda3/envs/tf/lib/python3.8/site-packages/tensorflow/python/_pywrap_tensorflow_internal.so(_ZN10tensorflow16TF_NewSessionRefEP8TF_GraphPK17TF_SessionOptionsP9TF_Status+0x12)[0x7fdfe6fc6ca2]
+[ruc-PowerEdge-T640:04531] [12] /home/leping_zhang/anaconda3/envs/tf/lib/python3.8/site-packages/tensorflow/python/client/_pywrap_tf_session.so(+0x9632e)[0x7fe0b61bd32e]
+[ruc-PowerEdge-T640:04531] [13] /home/leping_zhang/anaconda3/envs/tf/lib/python3.8/site-packages/tensorflow/python/client/_pywrap_tf_session.so(+0x8cb2f)[0x7fe0b61b3b2f]
+[ruc-PowerEdge-T640:04531] [14] python(PyCFunction_Call+0x56)[0x561558168c96]
+[ruc-PowerEdge-T640:04531] [15] python(_PyObject_MakeTpCall+0x22f)[0x56155812531f]
+[ruc-PowerEdge-T640:04531] [16] python(_PyEval_EvalFrameDefault+0x4689)[0x5615581b0b49]
+[ruc-PowerEdge-T640:04531] [17] python(_PyEval_EvalCodeWithName+0x2d2)[0x561558173c32]
+[ruc-PowerEdge-T640:04531] [18] python(+0x181fd0)[0x561558174fd0]
+[ruc-PowerEdge-T640:04531] [19] python(+0xfa6c1)[0x5615580ed6c1]
+[ruc-PowerEdge-T640:04531] [20] python(_PyEval_EvalCodeWithName+0x659)[0x561558173fb9]
+[ruc-PowerEdge-T640:04531] [21] python(_PyFunction_Vectorcall+0x1e3)[0x561558174bf3]
+[ruc-PowerEdge-T640:04531] [22] python(_PyObject_FastCallDict+0x24b)[0x56155817577b]
+[ruc-PowerEdge-T640:04531] [23] python(_PyObject_Call_Prepend+0x63)[0x5615581759e3]
+[ruc-PowerEdge-T640:04531] [24] python(+0x182b7a)[0x561558175b7a]
+[ruc-PowerEdge-T640:04531] [25] python(_PyObject_MakeTpCall+0x1a4)[0x561558125294]
+[ruc-PowerEdge-T640:04531] [26] python(_PyEval_EvalFrameDefault+0x11fd)[0x5615581ad6bd]
+[ruc-PowerEdge-T640:04531] [27] python(_PyEval_EvalCodeWithName+0x7df)[0x56155817413f]
+[ruc-PowerEdge-T640:04531] [28] python(_PyFunction_Vectorcall+0x1e3)[0x561558174bf3]
+[ruc-PowerEdge-T640:04531] [29] python(PyVectorcall_Call+0x71)[0x561558124b01]
+[ruc-PowerEdge-T640:04531] *** End of error message ***
+Aborted (core dumped)
+2023-05-14 19:10:50.951847: I tensorflow/core/platform/cpu_feature_guard.cc:193] This TensorFlow binary is optimized with oneAPI Deep Neural Network Library (oneDNN) to use the following CPU instructions in performance-critical operations:  AVX2 AVX512F AVX512_VNNI FMA
+To enable them in other operations, rebuild TensorFlow with the appropriate compiler flags.
+2023-05-14 19:10:51.131471: I tensorflow/core/util/port.cc:104] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
+2023-05-14 19:10:51.136146: W tensorflow/compiler/xla/stream_executor/platform/default/dso_loader.cc:64] Could not load dynamic library 'libcudart.so.11.0'; dlerror: libcudart.so.11.0: cannot open shared object file: No such file or directory; LD_LIBRARY_PATH: /home/leping_zhang/.mujoco/mujoco210/bin:/usr/lib/nvidia
+2023-05-14 19:10:51.136200: I tensorflow/compiler/xla/stream_executor/cuda/cudart_stub.cc:29] Ignore above cudart dlerror if you do not have a GPU set up on your machine.
+2023-05-14 19:10:51.978877: W tensorflow/compiler/xla/stream_executor/platform/default/dso_loader.cc:64] Could not load dynamic library 'libnvinfer.so.7'; dlerror: libnvinfer.so.7: cannot open shared object file: No such file or directory; LD_LIBRARY_PATH: /home/leping_zhang/.mujoco/mujoco210/bin:/usr/lib/nvidia
+2023-05-14 19:10:51.978961: W tensorflow/compiler/xla/stream_executor/platform/default/dso_loader.cc:64] Could not load dynamic library 'libnvinfer_plugin.so.7'; dlerror: libnvinfer_plugin.so.7: cannot open shared object file: No such file or directory; LD_LIBRARY_PATH: /home/leping_zhang/.mujoco/mujoco210/bin:/usr/lib/nvidia
+2023-05-14 19:10:51.978970: W tensorflow/compiler/tf2tensorrt/utils/py_utils.cc:38] TF-TRT Warning: Cannot dlopen some TensorRT libraries. If you would like to use Nvidia GPU with TensorRT, please make sure the missing libraries mentioned above are installed properly.
+2023-05-14 19:10:58.206182: I tensorflow/core/platform/cpu_feature_guard.cc:193] This TensorFlow binary is optimized with oneAPI Deep Neural Network Library (oneDNN) to use the following CPU instructions in performance-critical operations:  AVX2 AVX512F AVX512_VNNI FMA
+To enable them in other operations, rebuild TensorFlow with the appropriate compiler flags.
+2023-05-14 19:10:58.435203: F tensorflow/tsl/platform/statusor.cc:33] Attempting to fetch value instead of handling error INTERNAL: failed initializing StreamExecutor for CUDA device ordinal 0: INTERNAL: failed call to cuDevicePrimaryCtxRetain: CUDA_ERROR_OUT_OF_MEMORY: out of memory; total memory reported: 25447170048
+[ruc-PowerEdge-T640:11834] *** Process received signal ***
+[ruc-PowerEdge-T640:11834] Signal: Aborted (6)
+[ruc-PowerEdge-T640:11834] Signal code:  (-6)
+[ruc-PowerEdge-T640:11834] [ 0] /lib/x86_64-linux-gnu/libpthread.so.0(+0x12980)[0x7f429095f980]
+[ruc-PowerEdge-T640:11834] [ 1] /lib/x86_64-linux-gnu/libc.so.6(gsignal+0xc7)[0x7f429059ae87]
+[ruc-PowerEdge-T640:11834] [ 2] /lib/x86_64-linux-gnu/libc.so.6(abort+0x141)[0x7f429059c7f1]
+[ruc-PowerEdge-T640:11834] [ 3] /home/leping_zhang/anaconda3/envs/tf/lib/python3.8/site-packages/tensorflow/python/../libtensorflow_framework.so.2(+0x8552a7)[0x7f428ab542a7]
+[ruc-PowerEdge-T640:11834] [ 4] /home/leping_zhang/anaconda3/envs/tf/lib/python3.8/site-packages/tensorflow/python/../libtensorflow_framework.so.2(_ZN3tsl17internal_statusor6Helper5CrashERKNS_6StatusE+0x5e)[0x7f428aa3ab62]
+[ruc-PowerEdge-T640:11834] [ 5] /home/leping_zhang/anaconda3/envs/tf/lib/python3.8/site-packages/tensorflow/python/../libtensorflow_framework.so.2(_ZN10tensorflow20BaseGPUDeviceFactory16EnablePeerAccessERKSt6vectorIN3tsl3gtl7IntTypeINS2_21PlatformDeviceId_tag_EiEESaIS6_EE+0x32a)[0x7f428b98507a]
+[ruc-PowerEdge-T640:11834] [ 6] /home/leping_zhang/anaconda3/envs/tf/lib/python3.8/site-packages/tensorflow/python/../libtensorflow_framework.so.2(_ZN10tensorflow20BaseGPUDeviceFactory13CreateDevicesERKNS_14SessionOptionsERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEEPSt6vectorISt10unique_ptrINS_6DeviceESt14default_deleteISE_EESaISH_EE+0x1872)[0x7f428b98c522]
+[ruc-PowerEdge-T640:11834] [ 7] /home/leping_zhang/anaconda3/envs/tf/lib/python3.8/site-packages/tensorflow/python/../libtensorflow_framework.so.2(_ZN10tensorflow13DeviceFactory10AddDevicesERKNS_14SessionOptionsERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEEPSt6vectorISt10unique_ptrINS_6DeviceESt14default_deleteISE_EESaISH_EE+0x3bf)[0x7f428b55aacf]
+[ruc-PowerEdge-T640:11834] [ 8] /home/leping_zhang/anaconda3/envs/tf/lib/python3.8/site-packages/tensorflow/python/_pywrap_tensorflow_internal.so(_ZN10tensorflow20DirectSessionFactory10NewSessionERKNS_14SessionOptionsEPPNS_7SessionE+0x336)[0x7f41bcb3e2d6]
+[ruc-PowerEdge-T640:11834] [ 9] /home/leping_zhang/anaconda3/envs/tf/lib/python3.8/site-packages/tensorflow/python/../libtensorflow_framework.so.2(_ZN10tensorflow10NewSessionERKNS_14SessionOptionsEPPNS_7SessionE+0xe6)[0x7f428b955396]
+[ruc-PowerEdge-T640:11834] [10] /home/leping_zhang/anaconda3/envs/tf/lib/python3.8/site-packages/tensorflow/python/_pywrap_tensorflow_internal.so(TF_NewSession+0x3f)[0x7f41bc93a07f]
+[ruc-PowerEdge-T640:11834] [11] /home/leping_zhang/anaconda3/envs/tf/lib/python3.8/site-packages/tensorflow/python/_pywrap_tensorflow_internal.so(_ZN10tensorflow16TF_NewSessionRefEP8TF_GraphPK17TF_SessionOptionsP9TF_Status+0x12)[0x7f41bc48cca2]
+[ruc-PowerEdge-T640:11834] [12] /home/leping_zhang/anaconda3/envs/tf/lib/python3.8/site-packages/tensorflow/python/client/_pywrap_tf_session.so(+0x9632e)[0x7f428958c32e]
+[ruc-PowerEdge-T640:11834] [13] /home/leping_zhang/anaconda3/envs/tf/lib/python3.8/site-packages/tensorflow/python/client/_pywrap_tf_session.so(+0x8cb2f)[0x7f4289582b2f]
+[ruc-PowerEdge-T640:11834] [14] python(PyCFunction_Call+0x56)[0x55b46b083c96]
+[ruc-PowerEdge-T640:11834] [15] python(_PyObject_MakeTpCall+0x22f)[0x55b46b04031f]
+[ruc-PowerEdge-T640:11834] [16] python(_PyEval_EvalFrameDefault+0x4689)[0x55b46b0cbb49]
+[ruc-PowerEdge-T640:11834] [17] python(_PyEval_EvalCodeWithName+0x2d2)[0x55b46b08ec32]
+[ruc-PowerEdge-T640:11834] [18] python(+0x181fd0)[0x55b46b08ffd0]
+[ruc-PowerEdge-T640:11834] [19] python(+0xfa6c1)[0x55b46b0086c1]
+[ruc-PowerEdge-T640:11834] [20] python(_PyEval_EvalCodeWithName+0x659)[0x55b46b08efb9]
+[ruc-PowerEdge-T640:11834] [21] python(_PyFunction_Vectorcall+0x1e3)[0x55b46b08fbf3]
+[ruc-PowerEdge-T640:11834] [22] python(_PyObject_FastCallDict+0x24b)[0x55b46b09077b]
+[ruc-PowerEdge-T640:11834] [23] python(_PyObject_Call_Prepend+0x63)[0x55b46b0909e3]
+[ruc-PowerEdge-T640:11834] [24] python(+0x182b7a)[0x55b46b090b7a]
+[ruc-PowerEdge-T640:11834] [25] python(_PyObject_MakeTpCall+0x1a4)[0x55b46b040294]
+[ruc-PowerEdge-T640:11834] [26] python(_PyEval_EvalFrameDefault+0x11fd)[0x55b46b0c86bd]
+[ruc-PowerEdge-T640:11834] [27] python(_PyEval_EvalCodeWithName+0x7df)[0x55b46b08f13f]
+[ruc-PowerEdge-T640:11834] [28] python(_PyFunction_Vectorcall+0x1e3)[0x55b46b08fbf3]
+[ruc-PowerEdge-T640:11834] [29] python(PyVectorcall_Call+0x71)[0x55b46b03fb01]
+[ruc-PowerEdge-T640:11834] *** End of error message ***
+Aborted (core dumped)
+2023-05-14 19:10:59.125821: I tensorflow/core/platform/cpu_feature_guard.cc:193] This TensorFlow binary is optimized with oneAPI Deep Neural Network Library (oneDNN) to use the following CPU instructions in performance-critical operations:  AVX2 AVX512F AVX512_VNNI FMA
+To enable them in other operations, rebuild TensorFlow with the appropriate compiler flags.
+2023-05-14 19:10:59.351180: I tensorflow/core/util/port.cc:104] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
+2023-05-14 19:10:59.355688: W tensorflow/compiler/xla/stream_executor/platform/default/dso_loader.cc:64] Could not load dynamic library 'libcudart.so.11.0'; dlerror: libcudart.so.11.0: cannot open shared object file: No such file or directory; LD_LIBRARY_PATH: /home/leping_zhang/.mujoco/mujoco210/bin:/usr/lib/nvidia
+2023-05-14 19:10:59.355718: I tensorflow/compiler/xla/stream_executor/cuda/cudart_stub.cc:29] Ignore above cudart dlerror if you do not have a GPU set up on your machine.
+2023-05-14 19:11:00.159605: W tensorflow/compiler/xla/stream_executor/platform/default/dso_loader.cc:64] Could not load dynamic library 'libnvinfer.so.7'; dlerror: libnvinfer.so.7: cannot open shared object file: No such file or directory; LD_LIBRARY_PATH: /home/leping_zhang/.mujoco/mujoco210/bin:/usr/lib/nvidia
+2023-05-14 19:11:00.159707: W tensorflow/compiler/xla/stream_executor/platform/default/dso_loader.cc:64] Could not load dynamic library 'libnvinfer_plugin.so.7'; dlerror: libnvinfer_plugin.so.7: cannot open shared object file: No such file or directory; LD_LIBRARY_PATH: /home/leping_zhang/.mujoco/mujoco210/bin:/usr/lib/nvidia
+2023-05-14 19:11:00.159717: W tensorflow/compiler/tf2tensorrt/utils/py_utils.cc:38] TF-TRT Warning: Cannot dlopen some TensorRT libraries. If you would like to use Nvidia GPU with TensorRT, please make sure the missing libraries mentioned above are installed properly.
+2023-05-14 19:11:03.938464: I tensorflow/core/platform/cpu_feature_guard.cc:193] This TensorFlow binary is optimized with oneAPI Deep Neural Network Library (oneDNN) to use the following CPU instructions in performance-critical operations:  AVX2 AVX512F AVX512_VNNI FMA
+To enable them in other operations, rebuild TensorFlow with the appropriate compiler flags.
+2023-05-14 19:11:04.216702: F tensorflow/tsl/platform/statusor.cc:33] Attempting to fetch value instead of handling error INTERNAL: failed initializing StreamExecutor for CUDA device ordinal 0: INTERNAL: failed call to cuDevicePrimaryCtxRetain: CUDA_ERROR_OUT_OF_MEMORY: out of memory; total memory reported: 25447170048
+[ruc-PowerEdge-T640:21721] *** Process received signal ***
+[ruc-PowerEdge-T640:21721] Signal: Aborted (6)
+[ruc-PowerEdge-T640:21721] Signal code:  (-6)
+[ruc-PowerEdge-T640:21721] [ 0] /lib/x86_64-linux-gnu/libpthread.so.0(+0x12980)[0x7fce0ca31980]
+[ruc-PowerEdge-T640:21721] [ 1] /lib/x86_64-linux-gnu/libc.so.6(gsignal+0xc7)[0x7fce0c66ce87]
+[ruc-PowerEdge-T640:21721] [ 2] /lib/x86_64-linux-gnu/libc.so.6(abort+0x141)[0x7fce0c66e7f1]
+[ruc-PowerEdge-T640:21721] [ 3] /home/leping_zhang/anaconda3/envs/tf/lib/python3.8/site-packages/tensorflow/python/../libtensorflow_framework.so.2(+0x8552a7)[0x7fcdde2d72a7]
+[ruc-PowerEdge-T640:21721] [ 4] /home/leping_zhang/anaconda3/envs/tf/lib/python3.8/site-packages/tensorflow/python/../libtensorflow_framework.so.2(_ZN3tsl17internal_statusor6Helper5CrashERKNS_6StatusE+0x5e)[0x7fcdde1bdb62]
+[ruc-PowerEdge-T640:21721] [ 5] /home/leping_zhang/anaconda3/envs/tf/lib/python3.8/site-packages/tensorflow/python/../libtensorflow_framework.so.2(_ZN10tensorflow20BaseGPUDeviceFactory16EnablePeerAccessERKSt6vectorIN3tsl3gtl7IntTypeINS2_21PlatformDeviceId_tag_EiEESaIS6_EE+0x32a)[0x7fcddf10807a]
+[ruc-PowerEdge-T640:21721] [ 6] /home/leping_zhang/anaconda3/envs/tf/lib/python3.8/site-packages/tensorflow/python/../libtensorflow_framework.so.2(_ZN10tensorflow20BaseGPUDeviceFactory13CreateDevicesERKNS_14SessionOptionsERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEEPSt6vectorISt10unique_ptrINS_6DeviceESt14default_deleteISE_EESaISH_EE+0x1872)[0x7fcddf10f522]
+[ruc-PowerEdge-T640:21721] [ 7] /home/leping_zhang/anaconda3/envs/tf/lib/python3.8/site-packages/tensorflow/python/../libtensorflow_framework.so.2(_ZN10tensorflow13DeviceFactory10AddDevicesERKNS_14SessionOptionsERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEEPSt6vectorISt10unique_ptrINS_6DeviceESt14default_deleteISE_EESaISH_EE+0x3bf)[0x7fcddecddacf]
+[ruc-PowerEdge-T640:21721] [ 8] /home/leping_zhang/anaconda3/envs/tf/lib/python3.8/site-packages/tensorflow/python/_pywrap_tensorflow_internal.so(_ZN10tensorflow20DirectSessionFactory10NewSessionERKNS_14SessionOptionsEPPNS_7SessionE+0x336)[0x7fcd38c102d6]
+[ruc-PowerEdge-T640:21721] [ 9] /home/leping_zhang/anaconda3/envs/tf/lib/python3.8/site-packages/tensorflow/python/../libtensorflow_framework.so.2(_ZN10tensorflow10NewSessionERKNS_14SessionOptionsEPPNS_7SessionE+0xe6)[0x7fcddf0d8396]
+[ruc-PowerEdge-T640:21721] [10] /home/leping_zhang/anaconda3/envs/tf/lib/python3.8/site-packages/tensorflow/python/_pywrap_tensorflow_internal.so(TF_NewSession+0x3f)[0x7fcd38a0c07f]
+[ruc-PowerEdge-T640:21721] [11] /home/leping_zhang/anaconda3/envs/tf/lib/python3.8/site-packages/tensorflow/python/_pywrap_tensorflow_internal.so(_ZN10tensorflow16TF_NewSessionRefEP8TF_GraphPK17TF_SessionOptionsP9TF_Status+0x12)[0x7fcd3855eca2]
+[ruc-PowerEdge-T640:21721] [12] /home/leping_zhang/anaconda3/envs/tf/lib/python3.8/site-packages/tensorflow/python/client/_pywrap_tf_session.so(+0x9632e)[0x7fce0775532e]
+[ruc-PowerEdge-T640:21721] [13] /home/leping_zhang/anaconda3/envs/tf/lib/python3.8/site-packages/tensorflow/python/client/_pywrap_tf_session.so(+0x8cb2f)[0x7fce0774bb2f]
+[ruc-PowerEdge-T640:21721] [14] python(PyCFunction_Call+0x56)[0x55f0fa43fc96]
+[ruc-PowerEdge-T640:21721] [15] python(_PyObject_MakeTpCall+0x22f)[0x55f0fa3fc31f]
+[ruc-PowerEdge-T640:21721] [16] python(_PyEval_EvalFrameDefault+0x4689)[0x55f0fa487b49]
+[ruc-PowerEdge-T640:21721] [17] python(_PyEval_EvalCodeWithName+0x2d2)[0x55f0fa44ac32]
+[ruc-PowerEdge-T640:21721] [18] python(+0x181fd0)[0x55f0fa44bfd0]
+[ruc-PowerEdge-T640:21721] [19] python(+0xfa6c1)[0x55f0fa3c46c1]
+[ruc-PowerEdge-T640:21721] [20] python(_PyEval_EvalCodeWithName+0x659)[0x55f0fa44afb9]
+[ruc-PowerEdge-T640:21721] [21] python(_PyFunction_Vectorcall+0x1e3)[0x55f0fa44bbf3]
+[ruc-PowerEdge-T640:21721] [22] python(_PyObject_FastCallDict+0x24b)[0x55f0fa44c77b]
+[ruc-PowerEdge-T640:21721] [23] python(_PyObject_Call_Prepend+0x63)[0x55f0fa44c9e3]
+[ruc-PowerEdge-T640:21721] [24] python(+0x182b7a)[0x55f0fa44cb7a]
+[ruc-PowerEdge-T640:21721] [25] python(_PyObject_MakeTpCall+0x1a4)[0x55f0fa3fc294]
+[ruc-PowerEdge-T640:21721] [26] python(_PyEval_EvalFrameDefault+0x11fd)[0x55f0fa4846bd]
+[ruc-PowerEdge-T640:21721] [27] python(_PyEval_EvalCodeWithName+0x7df)[0x55f0fa44b13f]
+[ruc-PowerEdge-T640:21721] [28] python(_PyFunction_Vectorcall+0x1e3)[0x55f0fa44bbf3]
+[ruc-PowerEdge-T640:21721] [29] python(PyVectorcall_Call+0x71)[0x55f0fa3fbb01]
+[ruc-PowerEdge-T640:21721] *** End of error message ***
+Aborted (core dumped)
